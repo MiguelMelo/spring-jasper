@@ -10,10 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -24,7 +21,9 @@ import java.util.Map;
 
 @RestController
 public class ReportController {
-//    @CrossOrigin(origins = "*")
+    @GetMapping("/")
+    public String hello() { return "Hello World!"; };
+
     @PostMapping("/report")
     public ResponseEntity<byte[]> createReport(@RequestBody List<ReportModel> reports) throws FileNotFoundException, JRException {
         Map<String, Object> params = new HashMap<>();
