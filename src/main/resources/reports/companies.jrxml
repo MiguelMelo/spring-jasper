@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="companies" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a66cd55-84f7-4b39-8faa-4d51717048a5">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="email" class="java.lang.String"/>
+	<field name="balanco" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="razao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="305" y="0" width="250" height="30" uuid="03ca4bfa-c28f-4d58-98cb-325152a5e7f6"/>
+				<textElement textAlignment="Right">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Relatórios de Companias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="30" width="250" height="20" forecolor="#383838" uuid="f52ef48f-5c8e-402e-899a-9f058b836f5a"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Prefeitura Municipal de União dos Palmares]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="130" height="50" uuid="a136d2a4-59aa-4ed6-b064-ce48cf1b498d"/>
+				<imageExpression><![CDATA["https://github.com/MiguelMelo/spring-jasper/assets/14957405/41732be9-95ce-43cc-9f02-acd1aa1fbb6a"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="42370c80-3196-4cc0-8f6b-b415a519b7cf"/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="200" height="20" uuid="57639b5f-06ad-4035-98f4-5d126828ec4e"/>
+				<text><![CDATA[Razão Social]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="20" uuid="9f610501-e378-4371-91d8-c12b6b6ea3ad"/>
+				<text><![CDATA[Balanço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="174" height="20" uuid="9dd26906-3ecf-4341-b88a-f20a11bd1da8"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" uuid="69acbe45-9a0d-44a1-9e71-ddb1311e911d"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="200" height="20" uuid="dce3a4d5-bf22-4bcc-a640-57cf5be4861e"/>
+				<textFieldExpression><![CDATA[$F{razao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="20" uuid="9034a68b-ec88-4615-8b3c-ae32d7601c88"/>
+				<textFieldExpression><![CDATA[$F{balanco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="174" height="20" uuid="64b6ca88-4321-455c-8698-114bd4ae19e5"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="24" width="100" height="30" uuid="ad8780c0-9b36-46e0-b11c-3184e0f6413e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="280" y="24" width="100" height="30" uuid="c6865d69-5a33-46d4-88c2-44c5d2f4f87e"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
